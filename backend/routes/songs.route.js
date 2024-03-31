@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const {
-    setSong,
+    addSong,
     getSongs,
     getSongById,
     updateSong,
@@ -9,7 +9,7 @@ const {
 } = require('../controllers/songs.controller');
 
 
-router.route('/').get(getSongs).post(setSong);
+router.route('/').get(getSongs).post(addSong);
 router.route('/:id').get(getSongById).put(updateSong).delete(deleteSong);
 
 

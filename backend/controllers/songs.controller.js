@@ -4,7 +4,7 @@ const asyncHandler = require("express-async-handler")
 // @desc    Create Song
 // @route   POST /api/song
 // @access  Public
-const setSong = asyncHandler(async (req, res) => {
+const addSong = asyncHandler(async (req, res) => {
     const song = await Song.create(req.body);
     res.status(200).json(song);
 });
@@ -61,7 +61,7 @@ const deleteSong = asyncHandler(async (req, res) => {
 
 
 module.exports = {
-    setSong,
+    addSong,
     getSongs,
     getSongById,
     updateSong,
