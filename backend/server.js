@@ -13,9 +13,10 @@ app.use(express.urlencoded({extended: false}));
 
 // router
 app.use("/api/song", require('./routes/songs.route'));
+app.use("/api/user", require('./routes/user.route'));
 
 // Homepage Endpoint
-app.get("/", function (req, res) {
+app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
